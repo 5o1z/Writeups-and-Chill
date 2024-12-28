@@ -113,8 +113,8 @@ Hàm sẽ lấy giá trị ngẫu nhiên từ `/dev/random` và gán nó vào `&
 
 Thì mình đã nhập `choice` là `2`, như ta có thể thấy nó lấy kết quả đó trừ 1 và lưu vào `rax` và rồi lấy kết quả đó tính toán cho `rdx` (ở lần thử này `rdx = 8`). Tiếp đến gán địa chỉ của `conv` cho rax và cuối cùng là gán địa chỉ của `conv+offset` cho `rdx` rồi thực thi nó. Điều này làm cho mình nảy ra ý tưởng có thể tận dùng cái này để leak ra `passcode`. Và ý tưởng của mình là:
 
-- Ta tận dụng put@plt nhập vào `username` 
-- Ở lần nhập `ag` mình sẽ nhập vào địa chỉ của `passcode`
+- Ta sử dụng biến `username` để giữ địa chỉ `puts@plt`
+- Dùng `puts(&passcode)` để leak `passcode` và call hàm `hard(passcode)` để tạo shell
 
 Nhưng điều đầu tiên chúng ta cần làm là tính toán giá trị từ `conv` đến `username` trong memory để khi nó thực thi nó sẽ thực thi `got@plt` ta để ở biến `username`. `username` có địa chỉ `0x404080` và `conv` có địa chỉ `0x404010`. Offset từ `conv` -> `username` sẽ là `[(0x404080 + 0x404010) // 8] + 1 = 15`. Như vậy ta có thể leak được `passcode` và dùng nó để tạo shell
 
