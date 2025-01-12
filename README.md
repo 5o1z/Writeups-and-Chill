@@ -1,3 +1,1 @@
-# Writeups-and-Chill
-
-This repo stores all my practice challenges solution
+This repo stores all my solutions for pwn challenges
