@@ -27,9 +27,7 @@ if args.GDB: GDB(); input()
 # ===========================================================
 
 '''
-The strcat() function appends the src string to the dest string,
-overwriting the terminating null byte ('\0') at
-the end of dest and then adds a terminating null byte.
+The strcat() function appends the src string to the dest string, overwriting the terminating null byte ('\0') at the end of dest and then adds a terminating null byte.
 '''
 
 '''
@@ -89,7 +87,7 @@ def exploit():
 
   # Break the loop and return to win
     sla(b'> ', b'4')
-    
+
     interactive()
 
 if __name__ == '__main__':
