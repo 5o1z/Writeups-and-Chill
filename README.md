@@ -1,4 +1,7 @@
 # CTF Challenges
+<details id="2025">
+<summary>2025</summary>
+<p>
 
 | Name  | CTF | Year | Bug | Technique | Note |
 | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -8,6 +11,16 @@
 | [Beginner](2025/VSL/Beginner) | VSL Internal CTF | 2025 | `Buffer Overflow` | |  |
 | [Interesting Functions](2025/VSL/Interesting_Functions) | VSL Internal CTF | 2025 | `Buffer Overflow` `Format Strings`| | The strcat() function appends the src string to the dest string, overwriting the terminating null byte ('\0') at the end of dest and then adds a terminating null byte. |
 | [Present](2025/VSL/Present) | VSL Internal CTF | 2025 | `Buffer Overflow` | `Return to Libc` |  |
+
+</p>
+</details>
+
+<details id="2024">
+<summary>2024</summary>
+<p>
+
+| Name  | CTF | Year | Bug | Technique | Note |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 | [White Rabbit](2024/WWF_CTF/white_rabbit/white_rabbit) | World Wide Flag CTF | 2024 |  | `Shellcode` |  |
 | [og](2024/ångstromCTF/og) | ångstromCTF | 2024 |`Format String` `Buffer Overflow`  | `GOT Overwrite` |  |
 | [bap](2024/ångstromCTF/bap) | ångstromCTF | 2024 |`Format String` `Buffer Overflow`  | `Return to Libc` |  |
@@ -15,6 +28,8 @@
 | [retro2win](2024/1337UP/retro2win) | 1337UP Live CTF | 2024 | `Buffer Overflow` | `ROP` |  |
 | [Wanna Play A Game](2024/0xL4ughCTF/wanna_play_a_game) | 0xl4ughCTF | 2024 | `Out of Bound` | |  |
 
+</p>
+</details>
 
 # Other
 
